@@ -7,76 +7,53 @@ struct TabHeader<Trailing: View>: View {
     @ViewBuilder var trailing: () -> Trailing
 
     var body: some View {
-        ZStack(alignment: .trailing) {
-            // Card background
-            RoundedRectangle(cornerRadius: 24)
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            AppTheme.deepRose.opacity(0.18),
-                            AppTheme.softPink.opacity(0.45),
-                            AppTheme.warmWhite.opacity(0.6)
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 24)
-                        .stroke(AppTheme.primaryPink.opacity(0.25), lineWidth: 1)
-                )
-                .shadow(color: AppTheme.deepRose.opacity(0.12), radius: 14, x: 0, y: 6)
-
-            // Decorative large emoji (background layer)
-            Text(emoji)
-                .font(.system(size: 86))
-                .opacity(0.10)
-                .offset(x: -12, y: 0)
-
-            // Foreground content
-            HStack(alignment: .center, spacing: 12) {
-                // Icon badge
-                ZStack {
-                    Circle()
-                        .fill(AppTheme.heroGradient)
-                        .frame(width: 48, height: 48)
-                        .shadow(color: AppTheme.heartRed.opacity(0.3), radius: 8, y: 3)
-                    Text(emoji)
-                        .font(.system(size: 24))
-                }
-
-                // Text
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(title)
-                        .font(.system(size: 22, weight: .bold, design: .rounded))
-                        .foregroundStyle(AppTheme.deepRose)
+        // Content drives height — decoratives are background overlay
+        HStack(alignment: .center, spacing: 0) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                if let subtitle {
+                    Text(subtitle)
+                        .font(.system(size: 12, weight: .regular, design: .rounded))
+                        .foregroundStyle(.white.opacity(0.78))
                         .lineLimit(1)
-                    if let subtitle {
-                        Text(subtitle)
-                            .font(.system(size: 12, weight: .regular, design: .rounded))
-                            .foregroundStyle(.secondary)
-                            .lineLimit(1)
-                    }
                 }
-
-                Spacer()
-                trailing()
             }
-            .padding(.horizontal, 18)
-            .padding(.vertical, 14)
+            Spacer()
+            trailing().tint(.white)
         }
-        .frame(maxWidth: .infinity)
         .padding(.horizontal, 20)
-        .padding(.top, 8)
+        .padding(.vertical, 14)
+        .background {
+            ZStack(alignment: .trailing) {
+                // Gradient card
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(LinearGradient(
+                        colors: [AppTheme.deepRose, Color(red: 0.94, green: 0.38, blue: 0.54)],
+                        startPoint: .topLeading, endPoint: .bottomTrailing
+                    ))
+                    .shadow(color: AppTheme.deepRose.opacity(0.4), radius: 12, x: 0, y: 6)
+
+                // Decorative circles
+                Circle().fill(.white.opacity(0.07)).frame(width: 80).offset(x: -40, y: -22)
+                Circle().fill(.white.opacity(0.05)).frame(width: 50).offset(x: -20, y: 20)
+
+                // Watermark emoji — clipped inside card
+                Text(emoji)
+                    .font(.system(size: 70))
+                    .opacity(0.14)
+                    .offset(x: -10)
+                    .clipped()
+            }
+        }
     }
 }
 
-// Convenience init for tabs without a trailing button
 extension TabHeader where Trailing == EmptyView {
     init(emoji: String, title: String, subtitle: String? = nil) {
-        self.emoji = emoji
-        self.title = title
-        self.subtitle = subtitle
+        self.emoji = emoji; self.title = title; self.subtitle = subtitle
         self.trailing = { EmptyView() }
     }
 }
