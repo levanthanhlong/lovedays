@@ -169,8 +169,10 @@ struct OnboardingView: View {
             navRow(back: { page = 2 }, next: {
                 Task {
                     _ = await NotificationManager.shared.requestPermission()
-                    NotificationManager.shared.scheduleAnniversaryReminders(
-                        startDate: viewModel.startDate, partnerName: viewModel.partnerName)
+                    NotificationManager.shared.scheduleAllReminders(
+                        startDate: viewModel.startDate, partnerName: viewModel.partnerName,
+                        myBirthday: viewModel.myBirthday, partnerBirthday: viewModel.partnerBirthday,
+                        myName: viewModel.myName)
                 }
                 viewModel.completeOnboarding()
             }, nextLabel: "Hoàn thành 🎉")
