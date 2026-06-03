@@ -1,27 +1,20 @@
 import SwiftUI
 
 enum AppTheme {
-    // MARK: - Colors
-    static let primaryPink    = Color(red: 1.00, green: 0.75, blue: 0.80)
-    static let softPink       = Color(red: 1.00, green: 0.88, blue: 0.91)
-    static let warmWhite      = Color(red: 1.00, green: 0.97, blue: 0.95)
-    static let roseGold       = Color(red: 0.91, green: 0.67, blue: 0.63)
-    static let deepRose       = Color(red: 0.84, green: 0.33, blue: 0.50)
-    static let heartRed       = Color(red: 0.94, green: 0.30, blue: 0.47)
+    private static var t: AppThemeStyle { ThemeManager.shared.style }
+
+    // MARK: - Colors (dynamic — delegate to current theme)
+    static var primaryPink: Color  { t.medium }
+    static var softPink: Color     { t.light }
+    static var warmWhite: Color    { t.warm }
+    static var roseGold: Color     { t.neutral }
+    static var deepRose: Color     { t.primary }
+    static var heartRed: Color     { t.secondary }
 
     // MARK: - Gradients
-    static var mainGradient: LinearGradient {
-        LinearGradient(colors: [softPink, warmWhite], startPoint: .top, endPoint: .bottom)
-    }
-
-    static var heroGradient: LinearGradient {
-        LinearGradient(colors: [deepRose, heartRed], startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
-
-    static var cardGradient: LinearGradient {
-        LinearGradient(colors: [Color.white.opacity(0.95), softPink.opacity(0.4)],
-                       startPoint: .topLeading, endPoint: .bottomTrailing)
-    }
+    static var mainGradient: LinearGradient { t.mainGradient }
+    static var heroGradient: LinearGradient { t.heroGradient }
+    static var cardGradient: LinearGradient { t.cardGradient }
 
     // MARK: - Typography
     static func counterFont(size: CGFloat = 84) -> Font {
@@ -41,9 +34,9 @@ enum AppTheme {
     }
 
     // MARK: - Dimensions
-    static let cornerRadius: CGFloat = 24
-    static let cardCornerRadius: CGFloat = 20
-    static let cardPadding: CGFloat = 24
+    static let cornerRadius: CGFloat      = 24
+    static let cardCornerRadius: CGFloat  = 20
+    static let cardPadding: CGFloat       = 24
 }
 
 extension View {

@@ -3,6 +3,7 @@ import SwiftUI
 struct AnniversaryView: View {
     @ObservedObject var viewModel: LoveViewModel
     @State private var showAddEvent = false
+    @State private var editingEvent: CustomEvent? = nil
 
     var body: some View {
         ZStack {
@@ -34,10 +35,8 @@ struct AnniversaryView: View {
                 .padding(.bottom, 40)
             }
         }
-        .sheet(isPresented: $showAddEvent) {
-            AddEventView { event in
-                viewModel.addCustomEvent(event)
-            }
+        .sheet(isPresented: $showAddEvent, onDismiss: { editingEvent = nil }) {
+            AddEventView(viewModel: viewModel, event: editingEvent)
         }
     }
 
@@ -145,7 +144,8 @@ struct AnniversaryView: View {
             } else {
                 ForEach(upcoming, id: \.event.id) { item in
                     anniversaryCard(
-                        anniversary: Anniversary(title: item.event.title,
+                        anniversary: Anniversary(title: item.event.title +
+                            (item.event.notificationEnabled ? "  🔔" : ""),
                                                 date: item.event.date,
                                                 daysUntil: item.daysUntil,
                                                 isMonthly: false),
@@ -153,6 +153,12 @@ struct AnniversaryView: View {
                         accent: AppTheme.deepRose
                     )
                     .contextMenu {
+                        Button {
+                            editingEvent = item.event
+                            showAddEvent = true
+                        } label: {
+                            Label("Chỉnh sửa", systemImage: "pencil")
+                        }
                         Button(role: .destructive) {
                             viewModel.deleteCustomEvent(id: item.event.id)
                         } label: {

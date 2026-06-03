@@ -6,11 +6,11 @@ struct HomeView: View {
     @State private var selectedMyPhoto: PhotosPickerItem?
     @State private var selectedPartnerPhoto: PhotosPickerItem?
     @State private var floatingHearts: [FloatingHeart] = []
+    @State private var showPinkOverlay = false
 
     var body: some View {
         ZStack {
             AppTheme.mainGradient.ignoresSafeArea()
-            floatingHeartsLayer
 
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
@@ -23,6 +23,16 @@ struct HomeView: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 16)
             }
+
+            // Pink tint overlay (above scroll, below hearts)
+            Color(red: 1.0, green: 0.72, blue: 0.82)
+                .opacity(showPinkOverlay ? 0.22 : 0)
+                .ignoresSafeArea()
+                .allowsHitTesting(false)
+                .animation(.easeInOut(duration: 0.35), value: showPinkOverlay)
+
+            // Hearts layer on top of everything
+            floatingHeartsLayer
         }
         .onChange(of: selectedMyPhoto) { item in
             Task {
@@ -50,10 +60,10 @@ struct HomeView: View {
                 spawnHearts()
             } label: {
                 Image(systemName: viewModel.heartAnimating ? "heart.fill" : "heart")
-                    .font(.system(size: 26))
-                    .foregroundStyle(AppTheme.heartRed)
-                    .scaleEffect(viewModel.heartAnimating ? 1.3 : 1.0)
-                    .animation(.spring(response: 0.3, dampingFraction: 0.5), value: viewModel.heartAnimating)
+                    .font(.system(size: 28))
+                    .foregroundStyle(.white)
+                    .scaleEffect(viewModel.heartAnimating ? 1.4 : 1.0)
+                    .animation(.spring(response: 0.3, dampingFraction: 0.4), value: viewModel.heartAnimating)
             }
         }
     }
@@ -210,8 +220,10 @@ struct HomeView: View {
     private var floatingHeartsLayer: some View {
         ZStack {
             ForEach(floatingHearts) { heart in
-                Text("❤️")
+                Image(systemName: "heart.fill")
                     .font(.system(size: heart.size))
+                    .foregroundStyle(.red)
+                    .shadow(color: .red.opacity(0.4), radius: 4, y: 2)
                     .position(heart.position)
                     .opacity(heart.opacity)
                     .scaleEffect(heart.scale)
@@ -224,24 +236,48 @@ struct HomeView: View {
     private func spawnHearts() {
         let w = UIScreen.main.bounds.width
         let h = UIScreen.main.bounds.height
-        for _ in 0..<6 {
+
+        // Show pink tint
+        withAnimation { showPinkOverlay = true }
+
+        for i in 0..<18 {
             let id = UUID()
-            let x = CGFloat.random(in: 60...(w - 60))
-            let heart = FloatingHeart(id: id, position: CGPoint(x: x, y: h * 0.75),
-                                      size: CGFloat.random(in: 18...32), opacity: 0.9, scale: 1.0)
+            let delay = Double(i) * 0.07
+            let x = CGFloat.random(in: 20...(w - 20))
+            let startY = h + CGFloat.random(in: 0...60)
+            let duration = Double.random(in: 1.6...2.4)
+            let heart = FloatingHeart(
+                id: id,
+                position: CGPoint(x: x, y: startY),
+                size: CGFloat.random(in: 18...48),
+                opacity: Double.random(in: 0.75...1.0),
+                scale: 1.0
+            )
             floatingHearts.append(heart)
-            withAnimation(.easeOut(duration: 1.2)) {
-                if let idx = floatingHearts.firstIndex(where: { $0.id == id }) {
-                    floatingHearts[idx] = FloatingHeart(
-                        id: id,
-                        position: CGPoint(x: x + CGFloat.random(in: -40...40),
-                                          y: h * 0.75 - CGFloat.random(in: 180...300)),
-                        size: heart.size, opacity: 0, scale: 0.3)
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                withAnimation(.easeOut(duration: duration)) {
+                    if let idx = floatingHearts.firstIndex(where: { $0.id == id }) {
+                        floatingHearts[idx] = FloatingHeart(
+                            id: id,
+                            position: CGPoint(
+                                x: x + CGFloat.random(in: -50...50),
+                                y: CGFloat.random(in: -80...80)
+                            ),
+                            size: heart.size, opacity: 0,
+                            scale: CGFloat.random(in: 0.4...1.2)
+                        )
+                    }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    floatingHearts.removeAll { $0.id == id }
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-                floatingHearts.removeAll { $0.id == id }
-            }
+        }
+
+        // Hide pink tint
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+            withAnimation(.easeOut(duration: 0.6)) { showPinkOverlay = false }
         }
     }
 }

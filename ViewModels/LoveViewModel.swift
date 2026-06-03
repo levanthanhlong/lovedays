@@ -171,6 +171,7 @@ final class LoveViewModel: ObservableObject {
         if let date { defaults.set(date, forKey: UDKey.myBirthday) }
         else        { defaults.removeObject(forKey: UDKey.myBirthday) }
         recalculate()
+        scheduleNotifications()
     }
 
     func savePartnerBirthday(_ date: Date?) {
@@ -178,18 +179,41 @@ final class LoveViewModel: ObservableObject {
         if let date { defaults.set(date, forKey: UDKey.partnerBirthday) }
         else        { defaults.removeObject(forKey: UDKey.partnerBirthday) }
         recalculate()
+        scheduleNotifications()
     }
 
     // MARK: - Custom events
     func addCustomEvent(_ event: CustomEvent) {
         customEvents.append(event)
         persistCustomEvents()
+        scheduleEventNotif(event)
+        HapticManager.notification(.success)
+    }
+
+    func updateCustomEvent(_ event: CustomEvent) {
+        guard let idx = customEvents.firstIndex(where: { $0.id == event.id }) else { return }
+        customEvents[idx] = event
+        persistCustomEvents()
+        scheduleEventNotif(event)
         HapticManager.notification(.success)
     }
 
     func deleteCustomEvent(id: UUID) {
         customEvents.removeAll { $0.id == id }
         persistCustomEvents()
+        NotificationManager.shared.removeCustomEventNotification(id)
+    }
+
+    private func scheduleEventNotif(_ event: CustomEvent) {
+        guard event.notificationEnabled else { return }
+        Task {
+            // Request permission if not yet determined, then schedule
+            let status = await NotificationManager.shared.authorizationStatus()
+            if status == .notDetermined {
+                _ = await NotificationManager.shared.requestPermission()
+            }
+            NotificationManager.shared.scheduleCustomEventNotification(event)
+        }
     }
 
     // MARK: - Computed
@@ -267,8 +291,10 @@ final class LoveViewModel: ObservableObject {
     private func scheduleNotifications() {
         Task {
             guard await NotificationManager.shared.authorizationStatus() == .authorized else { return }
-            NotificationManager.shared.scheduleAnniversaryReminders(
-                startDate: startDate, partnerName: partnerName)
+            NotificationManager.shared.scheduleAllReminders(
+                startDate: startDate, partnerName: partnerName,
+                myBirthday: myBirthday, partnerBirthday: partnerBirthday,
+                myName: myName)
         }
     }
 
