@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050ECCE6785ABA990018E539 /* pre-receive.sample in Resources */ = {isa = PBXBuildFile; fileRef = B905D112485492616C7068DE /* pre-receive.sample */; };
+		08A6F677003AF74B546530B9 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FCD26C30350869A1BE83D1 /* DateCalculator.swift */; };
+		1206D99921E0001FD9221CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29106BEE95082D9A2795408 /* Assets.xcassets */; };
+		14451F61D5B0AF7316341646 /* pre-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = 43B0F5D144D80DD228C7B718 /* pre-commit.sample */; };
+		1459205BD01021791B24B42E /* settings.local.json in Resources */ = {isa = PBXBuildFile; fileRef = 9901B0DFE34B3E07048C6540 /* settings.local.json */; };
+		20F918B135A928FB2551D0B6 /* update.sample in Resources */ = {isa = PBXBuildFile; fileRef = C977019FEA28082C9F4FFA1C /* update.sample */; };
+		2CFC46B844357BFAB3DA2250 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CC686F71B5B47FFCA80CD1 /* NotificationManager.swift */; };
+		32E264BA54BC52A5B809B3F2 /* AnniversaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E4F0D2143228A4D634369 /* AnniversaryView.swift */; };
+		426E2CAFB022B2650489B82A /* LoveDaysWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14F5EC6488E596B6B4306380 /* LoveDaysWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		49701258CB2A37AABA285E2D /* push-to-checkout.sample in Resources */ = {isa = PBXBuildFile; fileRef = 3A398F66F6D51A1107142947 /* push-to-checkout.sample */; };
+		4A27EAF23F7BA50F562DBF7A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6A2986D59E5A85CFAFC7A3 /* OnboardingView.swift */; };
+		4BB97653C2353D2D662006C0 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1FC60B861D9CF9A69A4C3 /* NotesView.swift */; };
+		4D86CC8C05EC683F20FE1332 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD65E80B1586779EA6F4A54E /* AddEventView.swift */; };
+		4E4F53B3ADE7F2651AF20848 /* LoveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7BABC6DA78B3109665EBF3 /* LoveData.swift */; };
+		4F5EBD9159D3B7D864BFD85B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E6F33C46DC5E4F5B2AC64 /* MainView.swift */; };
+		569150D638E6108D3BCFCA8C /* NoteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098C61E16121ACFB24324B9 /* NoteEditorView.swift */; };
+		5975A25E9BF8E3680D37BDFE /* commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = 23400B7C63F146433CBA3A3C /* commit-msg.sample */; };
+		5E7CAB854142C65A744192DF /* post-update.sample in Resources */ = {isa = PBXBuildFile; fileRef = 04D9A5AABA2D9957A5C50E85 /* post-update.sample */; };
+		64A2F02E441B9B510D2EE8EF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BAAC82D7809BE65A9CB332 /* SettingsView.swift */; };
+		66E820B62C195D60C59D79A4 /* pre-rebase.sample in Resources */ = {isa = PBXBuildFile; fileRef = 94C76DED467985C9F9754C27 /* pre-rebase.sample */; };
+		6F7EF54457AB98E9EFC4A85F /* applypatch-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = DDE4D141C05CD0C081ECE428 /* applypatch-msg.sample */; };
+		782DD3E297577D0455DFD943 /* daemon.log in Resources */ = {isa = PBXBuildFile; fileRef = 084179877919F19CE7CCD42F /* daemon.log */; };
+		93CAC345518CDC32BD5A2233 /* TabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78041FBD4CF6A6E153A0D24D /* TabHeader.swift */; };
+		A1B44B5B29D16069840D7EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_46EF948C-2F6D-4CAB-8CE1-875331B1CF17" /* Assets.xcassets */; };
+		A215621F3714DD1F5FDDC376 /* LoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB4BC108F2D121F4A5E23FE /* LoveViewModel.swift */; };
+		AE2BFAA727CC62A11C7813C6 /* pre-push.sample in Resources */ = {isa = PBXBuildFile; fileRef = 64AAF38F08A9EC008A8928B6 /* pre-push.sample */; };
+		B2F999D81022756148C9008F /* pre-merge-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = D95383562E757723AA83E49A /* pre-merge-commit.sample */; };
+		B57834D30129CBF6A79DD5E9 /* pre-applypatch.sample in Resources */ = {isa = PBXBuildFile; fileRef = 6949826C32D2A8AC84083EDF /* pre-applypatch.sample */; };
+		BA8D6CD8FEE0198B73F143F0 /* prepare-commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = 045E06FD9C97B1A41EF643CC /* prepare-commit-msg.sample */; };
+		C00956518BCE9C7B228882D9 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFCDA4F2A1859C740FB356 /* HapticManager.swift */; };
+		CA6C0F04E78644819CD3E400 /* codegraph.db in Resources */ = {isa = PBXBuildFile; fileRef = BB5BF3EEFECCDF03C2C064F8 /* codegraph.db */; };
+		D5C96BCE90C942EC1C87711D /* LoveDaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_41272B6A-07A9-421D-9A86-3A75B0E37033" /* LoveDaysApp.swift */; };
+		D5DCB7870DE7E48183C52A90 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566293CF2D6B76DBA7DAB73 /* AppTheme.swift */; };
+		E2BA8192C7E72B1B85BE81B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A979CB967E15AD3CE31B05 /* HomeView.swift */; };
+		E7E1F8F8AF99B8443EED15E2 /* LoveDaysWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7DB0760AB44A0A97DCCD8 /* LoveDaysWidget.swift */; };
+		F563668CBB40D8D51B88DBDD /* fsmonitor-watchman.sample in Resources */ = {isa = PBXBuildFile; fileRef = A71012774886E3A7CE022104 /* fsmonitor-watchman.sample */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69DFE5A4ABC52B675F4007CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFC340AF8E66F82C81D5AB67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00BB22AC5B14170251DC0765;
+			remoteInfo = LoveDaysWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51F54D935488B222251258B3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				426E2CAFB022B2650489B82A /* LoveDaysWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		045E06FD9C97B1A41EF643CC /* prepare-commit-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
+		04D9A5AABA2D9957A5C50E85 /* post-update.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
+		084179877919F19CE7CCD42F /* daemon.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = daemon.log; sourceTree = "<group>"; };
+		08BAAC82D7809BE65A9CB332 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		14F5EC6488E596B6B4306380 /* LoveDaysWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LoveDaysWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A78F786EDA97F3A312A8A8D /* sourcetreeconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = sourcetreeconfig; sourceTree = "<group>"; };
+		23400B7C63F146433CBA3A3C /* commit-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
+		3566293CF2D6B76DBA7DAB73 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		3A398F66F6D51A1107142947 /* push-to-checkout.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "push-to-checkout.sample"; sourceTree = "<group>"; };
+		3CE1FC60B861D9CF9A69A4C3 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		43B0F5D144D80DD228C7B718 /* pre-commit.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
+		4521F086D77A76CFE84F284B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4B8A631E75F3CA50F0C33989 /* config */ = {isa = PBXFileReference; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
+		4CBFCDA4F2A1859C740FB356 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		4E6A2986D59E5A85CFAFC7A3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		64AAF38F08A9EC008A8928B6 /* pre-push.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-push.sample"; sourceTree = "<group>"; };
+		692E4F0D2143228A4D634369 /* AnniversaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryView.swift; sourceTree = "<group>"; };
+		6949826C32D2A8AC84083EDF /* pre-applypatch.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
+		69A979CB967E15AD3CE31B05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6AA1C074011F71E37C099CCD /* description */ = {isa = PBXFileReference; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
+		7016FF609EE1A019ECC29D7F /* LoveDaysWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoveDaysWidget.entitlements; sourceTree = "<group>"; };
+		78041FBD4CF6A6E153A0D24D /* TabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeader.swift; sourceTree = "<group>"; };
+		82B7DB0760AB44A0A97DCCD8 /* LoveDaysWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveDaysWidget.swift; sourceTree = "<group>"; };
+		85BCF2627CB7C2F350E7961F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		94C76DED467985C9F9754C27 /* pre-rebase.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
+		9901B0DFE34B3E07048C6540 /* settings.local.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = settings.local.json; sourceTree = "<group>"; };
+		A098C61E16121ACFB24324B9 /* NoteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditorView.swift; sourceTree = "<group>"; };
+		A71012774886E3A7CE022104 /* fsmonitor-watchman.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = "fsmonitor-watchman.sample"; sourceTree = "<group>"; };
+		B5315E6749A9D63B9C04A328 /* LoveDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B905D112485492616C7068DE /* pre-receive.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-receive.sample"; sourceTree = "<group>"; };
+		BB5BF3EEFECCDF03C2C064F8 /* codegraph.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = codegraph.db; sourceTree = "<group>"; };
+		BE0849A85AF3D1EF3DB37D93 /* FETCH_HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = FETCH_HEAD; sourceTree = "<group>"; };
+		BF7BABC6DA78B3109665EBF3 /* LoveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveData.swift; sourceTree = "<group>"; };
+		C33E6F33C46DC5E4F5B2AC64 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C977019FEA28082C9F4FFA1C /* update.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
+		D270BB0DB5506077FA270F54 /* HEAD */ = {isa = PBXFileReference; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		D95383562E757723AA83E49A /* pre-merge-commit.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "pre-merge-commit.sample"; sourceTree = "<group>"; };
+		DDE4D141C05CD0C081ECE428 /* applypatch-msg.sample */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
+		DEB55ACFE42746F53B70CB46 /* exclude */ = {isa = PBXFileReference; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
+		E29106BEE95082D9A2795408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3CC686F71B5B47FFCA80CD1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		E3FCD26C30350869A1BE83D1 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
+		EFB4BC108F2D121F4A5E23FE /* LoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveViewModel.swift; sourceTree = "<group>"; };
+		FD65E80B1586779EA6F4A54E /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		"TEMP_41272B6A-07A9-421D-9A86-3A75B0E37033" /* LoveDaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveDaysApp.swift; sourceTree = "<group>"; };
+		"TEMP_46EF948C-2F6D-4CAB-8CE1-875331B1CF17" /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		12BA9B372FCFDEDB00BA2926 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				"TEMP_41272B6A-07A9-421D-9A86-3A75B0E37033" /* LoveDaysApp.swift */,
+				"TEMP_46EF948C-2F6D-4CAB-8CE1-875331B1CF17" /* Assets.xcassets */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		1F3ECF609739E596344EB299 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3566293CF2D6B76DBA7DAB73 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		368E76BDB8AC12B7C429550E /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4D141C05CD0C081ECE428 /* applypatch-msg.sample */,
+				23400B7C63F146433CBA3A3C /* commit-msg.sample */,
+				A71012774886E3A7CE022104 /* fsmonitor-watchman.sample */,
+				04D9A5AABA2D9957A5C50E85 /* post-update.sample */,
+				6949826C32D2A8AC84083EDF /* pre-applypatch.sample */,
+				43B0F5D144D80DD228C7B718 /* pre-commit.sample */,
+				D95383562E757723AA83E49A /* pre-merge-commit.sample */,
+				64AAF38F08A9EC008A8928B6 /* pre-push.sample */,
+				94C76DED467985C9F9754C27 /* pre-rebase.sample */,
+				B905D112485492616C7068DE /* pre-receive.sample */,
+				045E06FD9C97B1A41EF643CC /* prepare-commit-msg.sample */,
+				3A398F66F6D51A1107142947 /* push-to-checkout.sample */,
+				C977019FEA28082C9F4FFA1C /* update.sample */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		3B65EF5D7F0E04ACFFE0F8F6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFB4BC108F2D121F4A5E23FE /* LoveViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3C482298833EEFA60047BF0C /* .codegraph */ = {
+			isa = PBXGroup;
+			children = (
+				85BCF2627CB7C2F350E7961F /* .gitignore */,
+				BB5BF3EEFECCDF03C2C064F8 /* codegraph.db */,
+				084179877919F19CE7CCD42F /* daemon.log */,
+			);
+			path = .codegraph;
+			sourceTree = "<group>";
+		};
+		4525F85433849602587096E5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4E6A2986D59E5A85CFAFC7A3 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5AC9C28C335E2F2D52B7DDE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5315E6749A9D63B9C04A328 /* LoveDays.app */,
+				14F5EC6488E596B6B4306380 /* LoveDaysWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DD817B2C258D9E56F0896F4 /* refs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		80BA8F2BDFE0CE0941628293 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				08BAAC82D7809BE65A9CB332 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		89DB1418FAB93B8FBB0E59AB /* info */ = {
+			isa = PBXGroup;
+			children = (
+				DEB55ACFE42746F53B70CB46 /* exclude */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		8B7B17BDC8DCE7AC847CE050 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				A098C61E16121ACFB24324B9 /* NoteEditorView.swift */,
+				3CE1FC60B861D9CF9A69A4C3 /* NotesView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		92E064AB9A93907E2D8ACC0D /* .claude */ = {
+			isa = PBXGroup;
+			children = (
+				9901B0DFE34B3E07048C6540 /* settings.local.json */,
+			);
+			path = .claude;
+			sourceTree = "<group>";
+		};
+		9D3279C34402415D18819C47 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				78041FBD4CF6A6E153A0D24D /* TabHeader.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B00CC22F0721085C62F58898 /* Anniversary */ = {
+			isa = PBXGroup;
+			children = (
+				FD65E80B1586779EA6F4A54E /* AddEventView.swift */,
+				692E4F0D2143228A4D634369 /* AnniversaryView.swift */,
+			);
+			path = Anniversary;
+			sourceTree = "<group>";
+		};
+		B63E57296E067A47AEFFB125 = {
+			isa = PBXGroup;
+			children = (
+				92E064AB9A93907E2D8ACC0D /* .claude */,
+				3C482298833EEFA60047BF0C /* .codegraph */,
+				CA6DC4B8821E92D6C5C1F84F /* .git */,
+				E72710CA2E429A55B6CD71A5 /* LoveDaysWidget */,
+				D094434E2BC235EB1FA62BF6 /* Models */,
+				1F3ECF609739E596344EB299 /* Theme */,
+				D781213FAFDF8F7D842D3F0B /* Utilities */,
+				3B65EF5D7F0E04ACFFE0F8F6 /* ViewModels */,
+				F957FAB2C57D3F8DFB3182F0 /* Views */,
+				5AC9C28C335E2F2D52B7DDE3 /* Products */,
+				12BA9B372FCFDEDB00BA2926 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFFDD848071E091F7DA4F8E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				69A979CB967E15AD3CE31B05 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CA6DC4B8821E92D6C5C1F84F /* .git */ = {
+			isa = PBXGroup;
+			children = (
+				368E76BDB8AC12B7C429550E /* hooks */,
+				89DB1418FAB93B8FBB0E59AB /* info */,
+				EA37D12BEFE900FDECA3BBFB /* objects */,
+				7DD817B2C258D9E56F0896F4 /* refs */,
+				4B8A631E75F3CA50F0C33989 /* config */,
+				6AA1C074011F71E37C099CCD /* description */,
+				BE0849A85AF3D1EF3DB37D93 /* FETCH_HEAD */,
+				D270BB0DB5506077FA270F54 /* HEAD */,
+				1A78F786EDA97F3A312A8A8D /* sourcetreeconfig */,
+			);
+			path = .git;
+			sourceTree = "<group>";
+		};
+		D094434E2BC235EB1FA62BF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF7BABC6DA78B3109665EBF3 /* LoveData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D781213FAFDF8F7D842D3F0B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E3FCD26C30350869A1BE83D1 /* DateCalculator.swift */,
+				4CBFCDA4F2A1859C740FB356 /* HapticManager.swift */,
+				E3CC686F71B5B47FFCA80CD1 /* NotificationManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E72710CA2E429A55B6CD71A5 /* LoveDaysWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E29106BEE95082D9A2795408 /* Assets.xcassets */,
+				4521F086D77A76CFE84F284B /* Info.plist */,
+				7016FF609EE1A019ECC29D7F /* LoveDaysWidget.entitlements */,
+				82B7DB0760AB44A0A97DCCD8 /* LoveDaysWidget.swift */,
+			);
+			path = LoveDaysWidget;
+			sourceTree = "<group>";
+		};
+		EA37D12BEFE900FDECA3BBFB /* objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		F957FAB2C57D3F8DFB3182F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B00CC22F0721085C62F58898 /* Anniversary */,
+				9D3279C34402415D18819C47 /* Components */,
+				BAFFDD848071E091F7DA4F8E /* Home */,
+				8B7B17BDC8DCE7AC847CE050 /* Notes */,
+				4525F85433849602587096E5 /* Onboarding */,
+				80BA8F2BDFE0CE0941628293 /* Settings */,
+				C33E6F33C46DC5E4F5B2AC64 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00BB22AC5B14170251DC0765 /* LoveDaysWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC15768175FC7632AF292F46 /* Build configuration list for PBXNativeTarget "LoveDaysWidget" */;
+			buildPhases = (
+				AF9B4C84F67EC9DD0F2B632A /* Sources */,
+				381FD5681C03B05709137D11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoveDaysWidget;
+			packageProductDependencies = (
+			);
+			productName = LoveDaysWidget;
+			productReference = 14F5EC6488E596B6B4306380 /* LoveDaysWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		84D365584D0EFF9D907829F9 /* LoveDays */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBBEB5756C3D92D9D35FAC3F /* Build configuration list for PBXNativeTarget "LoveDays" */;
+			buildPhases = (
+				B192CC9A98D20194CC3570C9 /* Sources */,
+				B368E62C8370DF234CD3E7C9 /* Resources */,
+				51F54D935488B222251258B3 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC407C04A8BEA48CAADC02DA /* PBXTargetDependency */,
+			);
+			name = LoveDays;
+			packageProductDependencies = (
+			);
+			productName = LoveDays;
+			productReference = B5315E6749A9D63B9C04A328 /* LoveDays.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFC340AF8E66F82C81D5AB67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = 206C0C0E3D031DF3482D2DB3 /* Build configuration list for PBXProject "LoveDays" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B63E57296E067A47AEFFB125;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5AC9C28C335E2F2D52B7DDE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D365584D0EFF9D907829F9 /* LoveDays */,
+				00BB22AC5B14170251DC0765 /* LoveDaysWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		381FD5681C03B05709137D11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1206D99921E0001FD9221CF8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B368E62C8370DF234CD3E7C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B44B5B29D16069840D7EF7 /* Assets.xcassets in Resources */,
+				6F7EF54457AB98E9EFC4A85F /* applypatch-msg.sample in Resources */,
+				CA6C0F04E78644819CD3E400 /* codegraph.db in Resources */,
+				5975A25E9BF8E3680D37BDFE /* commit-msg.sample in Resources */,
+				782DD3E297577D0455DFD943 /* daemon.log in Resources */,
+				F563668CBB40D8D51B88DBDD /* fsmonitor-watchman.sample in Resources */,
+				5E7CAB854142C65A744192DF /* post-update.sample in Resources */,
+				B57834D30129CBF6A79DD5E9 /* pre-applypatch.sample in Resources */,
+				14451F61D5B0AF7316341646 /* pre-commit.sample in Resources */,
+				B2F999D81022756148C9008F /* pre-merge-commit.sample in Resources */,
+				AE2BFAA727CC62A11C7813C6 /* pre-push.sample in Resources */,
+				66E820B62C195D60C59D79A4 /* pre-rebase.sample in Resources */,
+				050ECCE6785ABA990018E539 /* pre-receive.sample in Resources */,
+				BA8D6CD8FEE0198B73F143F0 /* prepare-commit-msg.sample in Resources */,
+				49701258CB2A37AABA285E2D /* push-to-checkout.sample in Resources */,
+				1459205BD01021791B24B42E /* settings.local.json in Resources */,
+				20F918B135A928FB2551D0B6 /* update.sample in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF9B4C84F67EC9DD0F2B632A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E1F8F8AF99B8443EED15E2 /* LoveDaysWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B192CC9A98D20194CC3570C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D86CC8C05EC683F20FE1332 /* AddEventView.swift in Sources */,
+				32E264BA54BC52A5B809B3F2 /* AnniversaryView.swift in Sources */,
+				D5DCB7870DE7E48183C52A90 /* AppTheme.swift in Sources */,
+				08A6F677003AF74B546530B9 /* DateCalculator.swift in Sources */,
+				C00956518BCE9C7B228882D9 /* HapticManager.swift in Sources */,
+				E2BA8192C7E72B1B85BE81B7 /* HomeView.swift in Sources */,
+				4E4F53B3ADE7F2651AF20848 /* LoveData.swift in Sources */,
+				D5C96BCE90C942EC1C87711D /* LoveDaysApp.swift in Sources */,
+				A215621F3714DD1F5FDDC376 /* LoveViewModel.swift in Sources */,
+				4F5EBD9159D3B7D864BFD85B /* MainView.swift in Sources */,
+				569150D638E6108D3BCFCA8C /* NoteEditorView.swift in Sources */,
+				4BB97653C2353D2D662006C0 /* NotesView.swift in Sources */,
+				2CFC46B844357BFAB3DA2250 /* NotificationManager.swift in Sources */,
+				4A27EAF23F7BA50F562DBF7A /* OnboardingView.swift in Sources */,
+				64A2F02E441B9B510D2EE8EF /* SettingsView.swift in Sources */,
+				93CAC345518CDC32BD5A2233 /* TabHeader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC407C04A8BEA48CAADC02DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00BB22AC5B14170251DC0765 /* LoveDaysWidget */;
+			targetProxy = 69DFE5A4ABC52B675F4007CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AE6A7913E87DF9BAE2696D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		38BB242E6A5E27DA31E67C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoveDays.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 873GZ4J6LK;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.samplecmccs;
+				PRODUCT_NAME = LoveDays;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		691A35C2C9C28433A55BD71D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LoveDaysWidget/LoveDaysWidget.entitlements;
+				DEVELOPMENT_TEAM = 873GZ4J6LK;
+				INFOPLIST_FILE = LoveDaysWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.samplecmccs.widget;
+				PRODUCT_NAME = LoveDaysWidget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6F637103DAB2C62A01CA101E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LoveDaysWidget/LoveDaysWidget.entitlements;
+				DEVELOPMENT_TEAM = 873GZ4J6LK;
+				INFOPLIST_FILE = LoveDaysWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.samplecmccs.widget;
+				PRODUCT_NAME = LoveDaysWidget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A70BD7899C74C5ACEFF34A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		AC7593A0A160B038E8BDD74D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoveDays.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 873GZ4J6LK;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.samplecmccs;
+				PRODUCT_NAME = LoveDays;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		206C0C0E3D031DF3482D2DB3 /* Build configuration list for PBXProject "LoveDays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70BD7899C74C5ACEFF34A19 /* Debug */,
+				1AE6A7913E87DF9BAE2696D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BC15768175FC7632AF292F46 /* Build configuration list for PBXNativeTarget "LoveDaysWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F637103DAB2C62A01CA101E /* Debug */,
+				691A35C2C9C28433A55BD71D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DBBEB5756C3D92D9D35FAC3F /* Build configuration list for PBXNativeTarget "LoveDays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7593A0A160B038E8BDD74D /* Debug */,
+				38BB242E6A5E27DA31E67C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFC340AF8E66F82C81D5AB67 /* Project object */;
+}

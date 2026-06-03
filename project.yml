@@ -1,0 +1,82 @@
+name: LoveDays
+options:
+  bundleIdPrefix: com.lovedays
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.4"
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  LoveDays:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: .
+        excludes:
+          - "LoveDaysWidget/**"
+          - "project.yml"
+          - "SETUP.md"
+          - "*.xcodeproj/**"
+          - "Info.plist"
+          - ".DS_Store"
+    resources:
+      - path: Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.app.samplecmccs
+        INFOPLIST_FILE: Info.plist
+        PRODUCT_NAME: LoveDays
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    entitlements:
+      path: LoveDays.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.app.testcmc
+    dependencies:
+      - target: LoveDaysWidget
+        embed: true
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSPhotoLibraryUsageDescription: "LoveDays cần truy cập ảnh để thêm ảnh đôi của hai bạn."
+        NSUserNotificationsUsageDescription: "LoveDays sẽ nhắc bạn vào ngày kỷ niệm."
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations: {}
+
+  LoveDaysWidget:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: LoveDaysWidget
+    resources:
+      - path: LoveDaysWidget/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.app.samplecmccs.widget
+        INFOPLIST_FILE: LoveDaysWidget/Info.plist
+        PRODUCT_NAME: LoveDaysWidget
+    entitlements:
+      path: LoveDaysWidget/LoveDaysWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.app.testcmc
+    info:
+      path: LoveDaysWidget/Info.plist
+      properties:
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
