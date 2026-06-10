@@ -28,6 +28,9 @@ targets:
           - "*.xcodeproj/**"
           - "Info.plist"
           - ".DS_Store"
+          - "build/**"
+          - "**/*.md"
+          - ".codegraph/**"
     resources:
       - path: Assets.xcassets
     settings:

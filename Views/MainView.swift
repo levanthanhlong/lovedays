@@ -14,6 +14,9 @@ struct MainView: View {
             NotesView(viewModel: viewModel)
                 .tabItem { Label("Ghi chú", systemImage: "note.text") }
 
+            GamesView()
+                .tabItem { Label("Trò chơi", systemImage: "gamecontroller.fill") }
+
             SettingsView(viewModel: viewModel)
                 .tabItem { Label("Cài đặt", systemImage: "gearshape.fill") }
         }
